@@ -1,0 +1,374 @@
+:root {
+    --blue: #2874f0;
+    --green: #388e3c;
+    --white: #ffffff;
+  }
+  
+  html {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  body {
+    margin: 0px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100%;
+    overflow-y: scroll;
+    position: relative;
+    color: black;
+  }
+
+  .parent-div {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .flipkart-parent-header {
+    background-color: var(--blue);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    position: sticky;
+    top: 0px;
+  }
+  
+  .flipkart-logo-link {
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 600;
+  }
+  
+  .flipkart-logo-link,
+  .flipkart-header-item-link {
+    text-decoration: none;
+    color: var(--white);
+  }
+  
+  .flipkart-header-item-link {
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 0.1px;
+    line-height: 20px;
+  }
+  
+  .margin-bottom-5 {
+    margin-bottom: 5px;
+  }
+  
+  #header-search-input {
+    min-width: 304px;
+    width: calc(100% - 1200px);
+    height: 36px;
+  }
+  
+  .flipkart-product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .flipkart-product-card-anchor {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .flipkart-product-card-wrapper {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .flipkart-product-card-wrapper:hover .flipkart-product-card-title {
+    color: var(--blue);
+  }
+  
+  .flipkart-product-card-details-wrapper {
+    flex-grow: 0.58;
+  }
+  
+  .flipkart-product-card-title {
+    font-size: 18px;
+  }
+  
+  .flipkart-product-review-rating {
+    color: #878787;
+    font-weight: 500;
+  }
+  
+  .flipkart-product-star-ratings {
+    background-color: var(--green);
+    border-radius: 3px;
+    color: yellow;
+    padding: 2px 4px;
+    font-size: 12px !important;
+  }
+  
+  .flipkart-product-features-list {
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 0px;
+    list-style-position: inside;
+  }
+  
+  .flipkart-product-features-list > li {
+    line-height: 22px;
+  }
+  
+  .flipkart-product-pricing-wrapper {
+    flex-grow: 0.41;
+  }
+  
+  .flipkart-product-price {
+    font-size: 25px;
+  }
+  
+  .flipkart-product-discount {
+    color: var(--green);
+  }
+  
+  .flipkart-product-add-cart-input-wrapper {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  .flipkart-product-add-cart-input {
+    cursor: pointer;
+  }
+  
+  .flipkart-product-add-cart-input-placeholder:hover {
+    font-weight: 550;
+  }
+  
+  .flipkart-parent-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 283px 323px;
+    grid-template-rows: 1fr 73px;
+    row-gap: 40px;
+    padding: 40px 0px 25px 0px;
+    background-color: #172337;
+    border-top: 1px solid #ddd;
+    color: white;
+  }
+  
+  .flipkart-parent-footer-list-title {
+    font-size: 12px;
+    color: #878787;
+    padding-bottom: 9px !important;
+  }
+  
+  .flipkart-parent-footer-list-items {
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    font-size: 12px;
+  }
+  
+  .flipkart-parent-footer-list-p-content {
+    line-height: 1.5;
+    font-size: 12px;
+    margin-top: 0px;
+  }
+  
+  .flipkart-parent-footer-list-items > a:hover,
+  .flipkart-parent-footer-list-p-content > span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .flipkart-parent-footer-bottom {
+    grid-column-start: 1;
+    grid-column-end: span 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border-top: 1px solid #454d5e;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .flipkart-parent-footer-bottom-item {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .flipkart-parent-footer-bottom-item > a {
+    cursor: pointer;
+  }
+  
+  #page-toast {
+    background-color: black;
+    padding: 16px 24px;
+    color: white;
+    width: fit-content;
+    position: fixed;
+    bottom: -50px;
+    left: calc(50% - 50px);
+    display: none;
+  }
+  
+  .toast-animation {
+    animation: toastfy 2s ease-in-out;
+    padding: 16px 24px;
+    display: flex !important;
+  }
+  
+  #compare-button {
+    cursor: pointer;
+    background-color: #2874f0;
+    transition: background-color 0.2s ease-in;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    border-radius: 2px;
+    z-index: 2;
+    visibility: hidden;
+  }
+  
+  #compare-count {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+  }
+  
+  #compare-product-list-wrapper {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    padding-bottom: 44px;
+    visibility: hidden;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 400ms;
+  }
+  
+  #compare-product-list {
+    display: flex;
+  }
+  
+  .single-compare-product {
+    min-width: 111px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 20px 24px;
+  }
+  
+  .single-compare-product-title {
+    font-size: 12px;
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+  
+  #cross-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+  }
+  
+  #remove-all-button {
+    position: absolute;
+    bottom: 16px;
+    right: 188px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  
+  @keyframes toastfy {
+    0% {
+      bottom: -50px;
+    }
+    20% {
+      bottom: 5px;
+    }
+  
+    80% {
+      bottom: 5px;
+    }
+  
+    100% {
+      bottom: -50px;
+    }
+  }
+  
+  .loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid black;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  .loader-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @media (min-width: 0px) and (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  
+    #header-search-input {
+      display: none;
+    }
+  
+    .flipkart-product-card-wrapper {
+      flex-direction: column;
+    }
+  
+    .flipkart-product-card-title {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  
+    .flipkart-product-features-list {
+      display: none;
+    }
+  
+    .flipkart-product-price {
+      font-size: inherit;
+    }
+  }
+  
